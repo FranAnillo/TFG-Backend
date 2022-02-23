@@ -24,18 +24,18 @@ public class Tarea extends NamedEntity {
 	@Column(name="descripcion")
 	protected String descripcion;
 	
-//	@Column(name="fechaInicio")
-//	protected LocalDate fechaInicio;
-//	
-//	@Column(name="fechaFin")
-//	protected LocalDate fechaFin;
-//	
-//	@Column(name="duracion")
-//	protected int duracion;
-//	
-//	@Column(name="priorizacion")
-//	protected int priorizacion;
-//	
+	@Column(name="fecha_inicio")
+	protected LocalDate fechaInicio;
+	
+	@Column(name="fecha_fin")
+	protected LocalDate fechaFin;
+	
+	@Column(name="duracion")
+	protected int duracion;
+	
+	@Column(name="priorizacion")
+	protected int priorizacion;
+	
 	
 	
 }
