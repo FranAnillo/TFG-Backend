@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.samples.petclinic.user.Authorities;
@@ -16,7 +18,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "tareas")
-public class Tarea extends NamedEntity {
+public class Tarea extends BaseEntity {
 	
 	@Column(name="nombre")
 	protected String nombre;
@@ -36,6 +38,12 @@ public class Tarea extends NamedEntity {
 	@Column(name="priorizacion")
 	protected int priorizacion;
 	
+	@ManyToOne
+	protected Usuario usuario;
 	
+	@ManyToOne
+	protected Usuario creator;
 	
+	@ManyToOne
+	protected Equipo equipo;
 }
